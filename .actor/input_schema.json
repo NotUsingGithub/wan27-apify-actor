@@ -1,0 +1,94 @@
+{
+  "title": "Wan 2.7 AI Video & Image Generator (wan2-7.io)",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "apiKey": {
+      "title": "Wan 2.7 API Token",
+      "type": "string",
+      "description": "Your API token from https://wan2-7.io/mcp/guide/ (also used by @wan27/cli and Wan 2.7 MCP). Check credit pricing at https://wan2-7.io/pricing/.",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "prompts": {
+      "title": "Prompts",
+      "type": "array",
+      "description": "One AI video or image generation task per prompt.",
+      "editor": "stringList",
+      "prefill": [
+        "A neon-lit rain-soaked street market in Tokyo at dusk, slow camera dolly push-in"
+      ]
+    },
+    "model": {
+      "title": "Model",
+      "type": "string",
+      "description": "Select a Wan 2.7 video or image generation model (see https://wan2-7.io/).",
+      "editor": "select",
+      "default": "wan2.7-t2v",
+      "enum": [
+        "wan2.7-t2v",
+        "wan2.7-i2v",
+        "wan2.7-image",
+        "wan2.7-image-pro"
+      ],
+      "enumTitles": [
+        "Wan 2.7 Text-to-Video (wan2.7-t2v)",
+        "Wan 2.7 Image-to-Video (wan2.7-i2v)",
+        "Wan 2.7 Image (wan2.7-image)",
+        "Wan 2.7 Image Pro (wan2.7-image-pro)"
+      ]
+    },
+    "resolution": {
+      "title": "Resolution",
+      "type": "string",
+      "description": "Output resolution tier.",
+      "editor": "select",
+      "default": "1080p",
+      "enum": [
+        "720p",
+        "1080p",
+        "2K"
+      ]
+    },
+    "aspectRatio": {
+      "title": "Aspect Ratio",
+      "type": "string",
+      "description": "Frame aspect ratio.",
+      "editor": "select",
+      "default": "16:9",
+      "enum": [
+        "16:9",
+        "9:16",
+        "1:1",
+        "4:3",
+        "3:4"
+      ]
+    },
+    "duration": {
+      "title": "Video Duration (seconds)",
+      "type": "integer",
+      "description": "Video clip duration in seconds (for wan2.7-t2v and wan2.7-i2v).",
+      "default": 5,
+      "minimum": 5,
+      "maximum": 10
+    },
+    "imageUrl": {
+      "title": "First-Frame Image URL (optional)",
+      "type": "string",
+      "description": "Optional public HTTPS image URL used as the starting frame for wan2.7-i2v.",
+      "editor": "textfield"
+    },
+    "timeoutSecs": {
+      "title": "Per-Item Timeout (seconds)",
+      "type": "integer",
+      "description": "Maximum time to wait for each generation task to complete.",
+      "default": 600,
+      "minimum": 30,
+      "maximum": 1800
+    }
+  },
+  "required": [
+    "apiKey",
+    "prompts"
+  ]
+}

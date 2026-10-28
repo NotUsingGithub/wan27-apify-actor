@@ -1,0 +1,85 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "type": "object",
+    "properties": {
+      "prompt": {
+        "type": "string",
+        "title": "Prompt"
+      },
+      "model": {
+        "type": "string",
+        "title": "Model"
+      },
+      "resolution": {
+        "type": "string",
+        "title": "Resolution"
+      },
+      "aspectRatio": {
+        "type": "string",
+        "title": "Aspect Ratio"
+      },
+      "id": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Task ID"
+      },
+      "url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Output URL"
+      },
+      "error": {
+        "type": "string",
+        "title": "Error"
+      }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Generated Media",
+      "transformation": {
+        "fields": [
+          "prompt",
+          "model",
+          "resolution",
+          "aspectRatio",
+          "url",
+          "id",
+          "error"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "prompt": {
+            "label": "Prompt"
+          },
+          "model": {
+            "label": "Model"
+          },
+          "resolution": {
+            "label": "Resolution"
+          },
+          "aspectRatio": {
+            "label": "Aspect Ratio"
+          },
+          "url": {
+            "label": "Output URL",
+            "format": "link"
+          },
+          "id": {
+            "label": "Task ID"
+          },
+          "error": {
+            "label": "Error"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "name": "wan27-ai-video-generator",
+  "title": "Wan 2.7 AI Video & Image Generator (wan2-7.io)",
+  "description": "Batch generate 1080p/2K AI videos and images with Wan 2.7 (https://wan2-7.io/). Supports wan2.7-t2v, wan2.7-i2v, wan2.7-image, and wan2.7-image-pro.",
+  "version": "0.1",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

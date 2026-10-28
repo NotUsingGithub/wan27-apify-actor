@@ -1,0 +1,20 @@
+{
+  "name": "wan27-apify-actor",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Official Apify Actor for Wan 2.7 AI (https://wan2-7.io/): batch AI video and image generation",
+  "homepage": "https://wan2-7.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotUsingGithub/wan27-apify-actor.git"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test.mjs"
+  },
+  "dependencies": {
+    "apify": "^3.2.6"
+  },
+  "license": "MIT"
+}
