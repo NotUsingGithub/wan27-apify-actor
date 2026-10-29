@@ -1,0 +1,13 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Wan 2.7 generation results",
+  "description": "Generated videos and images stored in the default dataset.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Results",
+      "description": "Dataset items with prompt, model, resolution, output URL, task id, and error.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
